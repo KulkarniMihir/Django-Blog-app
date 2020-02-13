@@ -1,0 +1,33 @@
+
+{% extends 'entries/base.html' %}
+
+{% block content %}  
+      
+      <div class="col-md-8">
+
+        <h1 class="my-4">Page Heading
+          <small>Secondary Text</small>
+        </h1>
+            
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <div class="card-header">
+            Login To Your Account
+          </div>
+          <div class="card-body">
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}   <!-- puts content into Paragraphs -->
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+        </div>
+
+    
+
+
+
+      </div>
+
+{% endblock %}
